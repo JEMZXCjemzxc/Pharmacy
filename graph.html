@@ -1,0 +1,165 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Inventory Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> -->
+            <!-- Inventory Overview -->
+            <!-- <div class="md:col-span-2 bg-white shadow-md rounded-lg p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Inventory Levels</h3>
+                    <div class="flex items-center space-x-2">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                            <i class="fas fa-plus mr-2"></i>Add Medicine
+                        </button>
+                        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                            <i class="fas fa-filter mr-2"></i>Filter
+                        </button>
+                    </div>
+                </div> -->
+
+                <!-- Inventory Bar Graph -->
+                <!-- <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-1/4 text-gray-700 font-semibold">Paracetamol</div>
+                        <div class="w-2/4 bg-gray-200 rounded-full h-4 overflow-hidden">
+                            <div class="bg-blue-500 h-full" style="width: 75%"></div>
+                        </div>
+                        <span class="w-1/4 text-right text-gray-600 pl-4">750/1000</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-1/4 text-gray-700 font-semibold">Ibuprofen</div>
+                        <div class="w-2/4 bg-gray-200 rounded-full h-4 overflow-hidden">
+                            <div class="bg-green-500 h-full" style="width: 60%"></div>
+                        </div>
+                        <span class="w-1/4 text-right text-gray-600 pl-4">600/1000</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-1/4 text-gray-700 font-semibold">Amoxicillin</div>
+                        <div class="w-2/4 bg-gray-200 rounded-full h-4 overflow-hidden">
+                            <div class="bg-red-500 h-full" style="width: 40%"></div>
+                        </div>
+                        <span class="w-1/4 text-right text-gray-600 pl-4">400/1000</span>
+                    </div>
+                </div> -->
+
+                <!-- Quick Stats -->
+                <!-- <div class="mt-6 grid grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg text-center">
+                        <i class="fas fa-box-open text-blue-500 text-2xl mb-2"></i>
+                        <p class="text-sm text-gray-600">Total Medicines</p>
+                        <p class="text-xl font-bold text-blue-600">45</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg text-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mb-2"></i>
+                        <p class="text-sm text-gray-600">In Stock</p>
+                        <p class="text-xl font-bold text-green-600">35</p>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg text-center">
+                        <i class="fas fa-exclamation-triangle text-red-500 text-2xl mb-2"></i>
+                        <p class="text-sm text-gray-600">Low Stock</p>
+                        <p class="text-xl font-bold text-red-600">10</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Recent Activity -->
+        <!-- <div class="mt-6 bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Recent Activity</h3>
+            <div class="space-y-3">
+                <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+                    <div>
+                        <p class="font-medium text-gray-700">Paracetamol Restocked</p>
+                        <p class="text-sm text-gray-500">Added 500 units</p>
+                    </div>
+                    <span class="text-sm text-gray-500">2 hours ago</span>
+                </div>
+                <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+                    <div>
+                        <p class="font-medium text-gray-700">Low Stock Alert</p>
+                        <p class="text-sm text-gray-500">Amoxicillin below threshold</p>
+                    </div>
+                    <span class="text-sm text-gray-500">4 hours ago</span>
+                </div>
+            </div>
+        </div> -->
+    <!-- </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>
+                    <button onclick="sortTable(0)">Sort by Name</button>
+                </th>
+                <th>
+                    <button onclick="sortTable(1)">Sort by Age</button>
+                </th>
+                <th>
+                    <button onclick="sortTable(2)">Sort by Date</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>2023-12-08</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>2024-01-15</td>
+            </tr>
+            <!-- More rows -->
+        </tbody>
+    </table>
+
+    <script>
+        function sortTable(columnIndex) {
+            let table = document.getElementById("data-table");
+            let rows = Array.from(table.rows).slice(1); // Exclude header row
+            let ascending = table.dataset.sort === 'asc';
+
+            rows.sort((a, b) => {
+                let cellA = a.cells[columnIndex].innerText;
+                let cellB = b.cells[columnIndex].innerText;
+
+                if (columnIndex === 1) {
+                    // Convert to number for numerical columns
+                    cellA = parseInt(cellA);
+                    cellB = parseInt(cellB);
+                } else if (columnIndex === 2) {
+                    // Convert date strings to Date objects for comparison
+                    cellA = new Date(cellA);
+                    cellB = new Date(cellB);
+                }
+
+                return ascending
+                    ? (cellA > cellB ? 1 : -1)
+                    : (cellA < cellB ? 1 : -1);
+            });
+
+            table.dataset.sort = ascending ? 'desc' : 'asc';
+            rows.forEach(row => table.appendChild(row));
+        }
+
+    </script>
+</body>
+</html>
